@@ -12,10 +12,10 @@ import (
 	"sync/atomic"
 	"time"
 
+	"github.com/amoskong/scylla-bench/random"
 	"github.com/gocql/gocql"
 	"github.com/hailocab/go-hostpool"
 	"github.com/pkg/errors"
-	"github.com/scylladb/scylla-bench/random"
 )
 
 type DistributionValue struct {
@@ -108,7 +108,7 @@ func Round(d time.Duration) time.Duration {
 	case d < time.Millisecond:
 		// Microseconds, no additional digits of precision
 		d = d.Round(time.Microsecond)
-	case d < time.Millisecond * time.Duration(10):
+	case d < time.Millisecond*time.Duration(10):
 		// 1-10 milliseconds, show an additional digit of precision
 		d = d.Round(time.Millisecond / time.Duration(10))
 	case d < time.Second:
@@ -251,7 +251,7 @@ func main() {
 		distribution string
 
 		hostSelectionPolicy string
-		tlsEncryption bool
+		tlsEncryption       bool
 	)
 
 	flag.StringVar(&mode, "mode", "", "operating mode: write, read, counter_update, counter_read, scan")

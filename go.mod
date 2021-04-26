@@ -1,4 +1,4 @@
-module github.com/scylladb/scylla-bench
+module github.com/amoskong/scylla-bench
 
 go 1.12
 
@@ -9,4 +9,4 @@ require (
 	github.com/pkg/errors v0.8.1
 )
 
-replace github.com/gocql/gocql => github.com/scylladb/gocql v1.4.0
+replace github.com/gocql/gocql => github.com/amoskong/gocql v1.5.0-amos
