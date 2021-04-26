@@ -4,7 +4,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/scylladb/scylla-bench/random"
+	"github.com/amoskong/scylla-bench/random"
 )
 
 func TestParseDistribution(t *testing.T) {
